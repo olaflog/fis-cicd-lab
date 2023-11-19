@@ -4,7 +4,7 @@ node {
      }
 
      stage('Build image') {
-         app = docker.build("730135569722.dkr.ecr.ap-northeast-2.amazonaws.com/fiscdlab")
+         app = docker.build("730135569722.dkr.ecr.ap-northeast-2.amazonaws.com/fiscicdlab")
      }
 
      stage('Push image') {
