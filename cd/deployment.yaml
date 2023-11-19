@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 730135569722.dkr.ecr.ap-northeast-2.amazonaws.com/fiscicdlab:5
+        image: 730135569722.dkr.ecr.ap-northeast-2.amazonaws.com/fiscicdlab:latest
