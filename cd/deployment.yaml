@@ -18,5 +18,5 @@ spec:
         app: flask
     spec:
       containers:
-      - image: ec2-13-124-102-170.ap-northeast-2.compute.amazonaws.com/fiscicdlab/flask-example:r20231121-001
+      - image: ec2-13-124-102-170.ap-northeast-2.compute.amazonaws.com/fiscicdlab/flask-example:r20231122-003
         name: fis-cicd-lab
