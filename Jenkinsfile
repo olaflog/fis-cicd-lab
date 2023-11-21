@@ -48,7 +48,7 @@ pipeline {
                             git config --global user.name olaflog
                             git config --global user.email olaflog@elsa.anna
                             git commit -m "Image Tag - ${IMAGE_TAG}"
-                            git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/olaflog/flask-example-apps.git
+                            git push https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/olaflog/fis-cicd-lab.git
                         '''
                     }
                 }
