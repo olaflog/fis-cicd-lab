@@ -5,7 +5,7 @@ pipeline {
         GITHUB_CREDENTIALS = credentials('github-jenkins')
         IMAGE_REGISTRY_ACCOUNT = "ec2-13-124-102-170.ap-northeast-2.compute.amazonaws.com/fiscicdlab"
         IMAGE_NAME = "flask-example"
-        IMAGE_TAG = "r20231122-002" // rYYYYMMDD-BuildNumber
+        IMAGE_TAG = "r20231122-003" // rYYYYMMDD-BuildNumber
     }
  
     stages {
@@ -40,7 +40,7 @@ pipeline {
                 script {
                     withCredentials([usernamePassword(credentialsId: 'github-jenkins', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USERNAME')]) {
                         sh '''
-                            rm -rf flask-example-apps
+                            rm -rf fis-cicd-lab
                             git clone -b main https://github.com/olaflog/fis-cicd-lab.git
                             cd fis-cicd-lab/cd
                             sed -i "s|image:.*|image: ${IMAGE_REGISTRY_ACCOUNT}/${IMAGE_NAME}:${IMAGE_TAG}|g" deployment.yaml
