@@ -1,19 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  creationTimestamp: null
   labels:
-    app: nginx
+    app: flask
+  name: flask
 spec:
-  replicas: 4
+  replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: flask
+  strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
-        app: nginx
+        app: flask
     spec:
       containers:
-      - name: nginx
-        image: 730135569722.dkr.ecr.ap-northeast-2.amazonaws.com/fiscicdlab:latest
+      - image: ec2-13-124-102-170.ap-northeast-2.compute.amazonaws.com/fiscicdlab/flask-example:r20231121-001
+        name: fis-cicd-lab
